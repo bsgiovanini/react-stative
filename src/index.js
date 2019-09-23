@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+import state from 'stative';
+
+state.set({
+    currentItem: {text:'', key:''},
+    items: [
+      {text:'Simple state management', key: '1'},
+      {text:'Reactive state', key: '2' },
+      {text:'RxJS', key: '3' }
+    ],
+  });  
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
